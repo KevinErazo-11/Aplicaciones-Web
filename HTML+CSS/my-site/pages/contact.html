@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - My University Website</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+
+  <header>
+    <h1>Contact Me</h1>
+  </header>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="other1.html">Hobbies</a>
+    <a href="other2.html">Outreach</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <form action="#" method="POST">
+        <p>
+          <label for="name">Full Name:</label><br>
+          <input type="text" id="name" name="name" placeholder="e.g. Kevin Erazo" required>
+        </p>
+
+        <p>
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" placeholder="e.g. kevin.erazo@yachaytech.edu.ec" required>
+        </p>
+
+        <p>
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob" required>
+        </p>
+
+        <p>
+          <label for="program">Degree Program:</label><br>
+          <select id="program" name="program" required>
+            <option value="">-- Select --</option>
+            <option value="agro">Agricultural and Agro-Industrial Sciences</option>
+            <option value="biological">Biological Sciences and Engineering</option>
+            <option value="physical">Physical Sciences and Nanotechnology</option>
+            <option value="earth">Earth Sciences, Energy and Environment</option>
+            <option value="math_cs">Mathematical and Computational Sciences</option>
+            <option value="chemical">Chemical Sciences and Engineering</option>
+            <option value="language">Language Center</option>
+            <option value="experimental">Experimental Sciences Education</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="semester">Semester:</label><br>
+          <input type="number" id="semester" name="semester" min="1" max="10" placeholder="e.g. 8" required>
+        </p>
+
+        <p>
+          <label>Reason for Contact:</label><br>
+          <input type="radio" id="reason_academic" name="reason" value="academic" required>
+          <label for="reason_academic">Academic</label><br>
+          <input type="radio" id="reason_collab" name="reason" value="collaboration">
+          <label for="reason_collab">Collaboration</label><br>
+          <input type="radio" id="reason_other" name="reason" value="other">
+          <label for="reason_other">Other</label>
+        </p>
+
+        <p>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..." required></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" id="accept" name="accept" required>
+          <label for="accept">I accept that this information may be used to contact me.</label>
+        </p>
+
+        <p>
+          <button type="submit" name="submit">Send Message</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kevin Erazo — My University Website. Workshop 2: Web Applications.</p>
+  </footer>
+
+</body>
+</html>

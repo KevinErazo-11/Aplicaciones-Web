@@ -1,0 +1,62 @@
+/* Formularios limpios */
+input[type="text"], 
+input[type="email"], 
+input[type="date"], 
+input[type="number"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    background-color: var(--bg-surface);
+}
+
+/* Evita que los iconos del calendario (en date) se vean mal en oscuro */
+::-webkit-calendar-picker-indicator {
+    filter: invert(0.8) sepia(1) hue-rotate(180deg) saturate(200%);
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"], 
+input[type="submit"] {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+button[type="submit"]:hover, 
+input[type="submit"]:hover {
+    background-color: #2563eb; /* Un tono de azul ligeramente más intenso */
+    transform: translateY(-2px); /* Lo eleva un poco */
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); /* Sombra azulada */
+}
+
+/* Efecto al hacer clic (Active) */
+button[type="submit"]:active, 
+input[type="submit"]:active {
+    transform: translateY(0); /* Vuelve a su posición original */
+    box-shadow: none;
+}

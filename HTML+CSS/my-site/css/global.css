@@ -1,0 +1,96 @@
+:root {
+    /* Fondos: Grises neutros y elegantes (como editores de código o dashboards) */
+    --bg-main: #121214;        
+    --bg-surface: #1e1e24;     
+    
+    /* El azul ahora destaca sobre lo oscuro, dándole vida */
+    --accent-blue: #3b82f6;    /* Azul vibrante para interacciones y detalles */
+    --accent-dark: #003366;    /* Azul clásico para degradados sutiles */
+    
+    /* Textos legibles y sin brillo excesivo */
+    --text-primary: #f3f4f6;   
+    --text-secondary: #9ca3af; 
+    
+    /* Líneas separadoras */
+    --border-color: #374151;   
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--accent-dark) 100%);
+    color: var(--text-primary);
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    background: var(--bg-surface);
+    display: flex;
+    justify-content: center;
+    padding: 0; /* Ajustado para el nuevo efecto de hover */
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+/* Efecto de línea inferior al pasar el cursor (más interactivo) */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--accent-blue);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-blue);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 30px 40px;
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    background: var(--bg-surface);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    /* Línea superior azul para darle carácter a la tarjeta */
+    border-top: 4px solid var(--accent-blue); 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
