@@ -11,6 +11,6 @@ def test_health_check(client):
     data = response.json()
     assert data["status"] == "ok"
     assert data["database"] == "ok"
-    assert data["service"] == "servicio-incorrecto"
+    assert data["service"] == "md-marketing-api"
     assert data["version"] == "1.0.0"
     assert "timestamp" in data
