@@ -1,4 +1,3 @@
-import os
 import pytest
 from django.urls import reverse
 
